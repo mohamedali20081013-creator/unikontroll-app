@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UniKontroll – Allt du behöver för att styra allt</title>
+  <meta name="description" content="UniKontroll: en liten universell fjärrkontroll som styr TV, AC, lampor och mer – direkt från mobilen." />
+  <link rel="apple-touch-icon" href="assets/all_in_one.png">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="topnote">Gratis frakt. Ord. frakt 200 kr – <b>rabatt just nu</b>.</div>
+
+  <!-- Nav (NO admin link here) -->
+  <header class="nav">
+    <a class="nav__brand" href="#overview" aria-label="UniKontroll start">
+      <span class="logo">🕹️</span>
+      <span class="brand">UniKontroll</span>
+    </a>
+    <nav class="nav__links">
+      <a href="#overview">Översikt</a>
+      <a href="#specs">Specifikationer</a>
+      <a href="#buy" class="nav__buy">Köp</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="overview" class="hero">
+    <div class="hero__content">
+      <h1>En liten pryl. <br>Full kontroll.</h1>
+      <p class="lede">UniKontroll låter dig styra <b>TV</b>, <b>AC</b>, <b>fläktar</b>, <b>lampor</b> och mer med din telefon. Mindre krångel. Mer fokus.</p>
+      <div class="cta">
+        <a href="#buy" class="btn btn--primary">Köp – 150 kr</a>
+        <a href="#learn" class="btn btn--ghost">Läs mer</a>
+      </div>
+      <p class="price-note">Pris 150 kr • <span class="muted">Ord. frakt 200 kr – <b>Gratis frakt</b> nu</span></p>
+    </div>
+    <figure class="hero__image">
+      <img src="assets/all_in_one.png" alt="UniKontroll universell fjärrkontroll">
+    </figure>
+  </section>
+
+  <!-- Learn / Highlights -->
+  <section id="learn" class="section section--two">
+    <div class="split">
+      <div class="split__text">
+        <h2>Fungerar nästan överallt.</h2>
+        <p>Styr TV, digitalbox, luftkonditionering, fläkt, taklampa, projektor och mer – allt i samma app.</p>
+        <ul class="bullets">
+          <li>Brett enhetsstöd och inlärningsläge</li>
+          <li>Snabb installation – plugga in och kör</li>
+          <li>Designad för hem, kontor, skola och hotell</li>
+        </ul>
+      </div>
+      <figure class="split__media card">
+        <img src="assets/wide_application.png" alt="Brett användningsområde UniKontroll">
+      </figure>
+    </div>
+  </section>
+
+  <section class="section section--two alt">
+    <div class="split">
+      <figure class="split__media card">
+        <img src="assets/compatibility.png" alt="Kompatibel med de flesta smartphones">
+      </figure>
+      <div class="split__text">
+        <h2>Kompatibel med din telefon.</h2>
+        <p>Fungerar med de flesta iOS- och Android-telefoner. På vissa Android-modeller behöver du aktivera OTG.</p>
+        <p class="muted small">Appen guidar steg för steg för att para ihop enheter.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section tight">
+    <figure class="panel card">
+      <img src="assets/use_cases.png" alt="UniKontroll i hem, kontor, skola och hotell">
+      <figcaption>Ta med kontrollen. <span class="muted">Hem • Kontor • Skola • Hotell</span></figcaption>
+    </figure>
+  </section>
+
+  <!-- Specs -->
+  <section id="specs" class="section specs">
+    <h2>Specifikationer</h2>
+    <div class="specs__grid">
+      <div class="spec"><h3>Stöd</h3><p>TV, STB, AC, fläkt, belysning, projektor m.m.</p></div>
+      <div class="spec"><h3>Kompatibilitet</h3><p>iOS & Android (OTG kan behövas för vissa Android-modeller)</p></div>
+      <div class="spec"><h3>Ström</h3><p>Drivs av telefonen. Inga batterier behövs.</p></div>
+      <div class="spec"><h3>I förpackningen</h3><p>UniKontroll + skyddsfodral</p></div>
+    </div>
+  </section>
+
+  <!-- Buy (with extra bottom space so button is never cut) -->
+  <section id="buy" class="buy">
+    <div class="buy__card">
+      <div class="buy__head">
+        <h2>Köp UniKontroll</h2>
+        <div class="price">150 kr</div>
+        <div class="ship">Gratis frakt <span class="muted">(ord. 200 kr – rabatt)</span></div>
+      </div>
+
+      <form id="orderForm" class="buy__form">
+        <label>Antal<input type="number" id="qty" value="1" min="1" /></label>
+        <label>Namn<input type="text" id="name" placeholder="Anna Svensson" required /></label>
+        <label>E-post<input type="email" id="email" placeholder="du@example.com" required /></label>
+        <label>Adress<textarea id="address" placeholder="Gata, Postnummer, Stad, Land" required></textarea></label>
+
+        <div class="summary">
+          <div>Delsumma</div><div id="subtotal">150 kr</div>
+          <div>Frakt</div><div id="shipping">0 kr</div>
+          <div class="bold">Totalt</div><div class="bold" id="total">150 kr</div>
+        </div>
+
+        <button class="btn btn--primary btn--block buy__btn" type="submit">Fortsätt till betalning</button>
+        <p class="muted small">Du skickas till betalning. Detta är ett demo-flöde.</p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__row">
+      <div class="footer__brand">UniKontroll</div>
+      <div class="footer__meta muted small">© <span id="year"></span> UniKontroll. Alla rättigheter förbehållna.</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin – UniKontroll</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .table{width:100%; border-collapse:collapse}
+    .table th,.table td{border-bottom:1px solid var(--border); padding:.7rem .5rem; text-align:left; vertical-align:top}
+    .login-card{max-width:460px;margin:40px auto;background:#fff;border:1px solid var(--border);border-radius:18px;padding:18px}
+    .actions{display:flex; gap:8px}
+    .btn-danger{background:#b91c1c;color:#fff;border-color:#b91c1c}
+    .addr{white-space:pre-wrap; max-width:28ch}
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <a class="nav__brand" href="/"><span class="logo">🕹️</span><span class="brand">UniKontroll Admin</span></a>
+  </header>
+
+  <section class="section">
+    <div id="loginBox" class="login-card">
+      <h2>Logga in</h2>
+      <form id="loginForm" class="buy__form">
+        <label>Användarnamn<input type="text" id="username" placeholder="admin" required /></label>
+        <label>Lösenord<input type="password" id="password" placeholder="••••••••" required /></label>
+        <button class="btn btn--primary btn--block" type="submit">Logga in</button>
+      </form>
+    </div>
+
+    <div id="adminBox" style="display:none">
+      <div class="buy__head" style="margin-bottom:16px">
+        <h2>Beställningar</h2>
+        <button id="logoutBtn" class="btn btn--ghost">Logga ut</button>
+      </div>
+
+      <div class="card" style="padding:0">
+        <table class="table" id="ordersTable">
+          <thead>
+            <tr>
+              <th>Tid</th>
+              <th>Namn</th>
+              <th>E-post</th>
+              <th>Adress</th>
+              <th>Antal</th>
+              <th>Totalt</th>
+              <th>Status</th>
+              <th>Kort (sista 4)</th>
+              <th>Åtgärder</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <script src="admin.js"></script>
+</body>
+</html>

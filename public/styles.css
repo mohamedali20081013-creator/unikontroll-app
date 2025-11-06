@@ -1,0 +1,71 @@
+:root{--bg:#fff;--text:#111;--muted:#6b7280;--border:#e5e7eb;--accent:#111;--ghost:#f3f4f6}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;height:100%}             /* ensure full-height layout */
+section{scroll-margin-top:80px}                        /* anchors not hidden under sticky nav */
+
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Arial,sans-serif;color:var(--text);background:#fff;line-height:1.55}
+.muted{color:var(--muted)}.small{font-size:.88rem}.bold{font-weight:700}
+.card{background:#fff;border:1px solid var(--border);border-radius:24px;box-shadow:0 6px 24px rgba(0,0,0,.05)}
+.btn{display:inline-block;padding:.85rem 1.2rem;border-radius:9999px;font-weight:600;border:1px solid transparent;cursor:pointer}
+.btn--primary{background:var(--accent);color:#fff}.btn--primary:hover{opacity:.9}
+.btn--ghost{background:var(--ghost);color:var(--text);border-color:var(--border)}.btn--ghost:hover{background:#eaecef}
+.btn--block{width:100%}
+
+.topnote{text-align:center;padding:.55rem 1rem;font-size:.9rem;background:#f5f5f7;border-bottom:1px solid var(--border)}
+
+.nav{position:sticky;top:0;z-index:10;backdrop-filter:saturate(1.8) blur(10px);background:rgba(255,255,255,.7);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:.75rem clamp(16px,4vw,40px)}
+.nav__brand{display:flex;gap:.5rem;align-items:center;color:inherit;text-decoration:none}.logo{font-size:1.1rem}.brand{font-weight:700}
+.nav__links a{margin-left:1.2rem;color:inherit;text-decoration:none}
+.nav__buy{padding:.45rem .9rem;border-radius:9999px;background:#000;color:#fff}
+
+/* Hero */
+.hero{max-width:1200px;margin:0 auto;padding:clamp(32px,5vw,72px) clamp(16px,4vw,40px) 0;display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(20px,4vw,48px);align-items:center}
+.hero__content h1{font-size:clamp(32px,6vw,64px);letter-spacing:-.02em;line-height:1.08;margin:0 0 12px}
+.lede{font-size:clamp(16px,2.2vw,22px);color:#1f2937;max-width:40ch}
+.cta{display:flex;gap:12px;margin:18px 0}.price-note{color:var(--muted);margin-top:6px}
+.hero__image img{width:100%;border-radius:28px;border:1px solid var(--border)}
+
+/* Sections */
+.section{max-width:1200px;margin:0 auto;padding:clamp(40px,6vw,80px) clamp(16px,4vw,40px)}
+.section.tight{padding-top:24px}
+.section h2{font-size:clamp(26px,3.8vw,44px);letter-spacing:-.02em;margin:0 0 10px}
+.section.alt{background:#f5f5f7}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(18px,3.8vw,40px);align-items:center}
+.split__media img{width:100%;border-radius:22px}
+.bullets{margin:12px 0 0 0;padding-left:18px}.bullets li{margin:.3rem 0}
+
+/* Specs */
+.specs{border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:#fff}
+.specs__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:16px}
+.spec{padding:18px;border:1px solid var(--border);border-radius:18px;background:#fff}
+.spec h3{margin:.2rem 0 .35rem 0;font-size:1.05rem}
+
+/* Buy */
+.buy{
+  padding:clamp(40px,6vw,80px) 16px 160px; /* extra bottom space so button is never cut off */
+  background:#f5f5f7;
+}
+.buy__card{max-width:860px;margin:0 auto 40px;background:#fff;border:1px solid var(--border);border-radius:28px;padding:clamp(20px,3vw,28px)}
+.buy__head{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-bottom:10px}
+.price{font-size:clamp(22px,3.2vw,32px);font-weight:800}.ship{color:#065f46}
+.buy__form{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:8px}
+.buy__form label{display:grid;gap:6px;font-weight:600}
+.buy__form input,.buy__form textarea{width:100%;padding:.9rem .95rem;border:1px solid var(--border);border-radius:12px;background:#fafafa}
+.buy__form textarea{min-height:120px;grid-column:span 2}
+.summary{grid-column:span 2;display:grid;grid-template-columns:1fr auto;gap:6px;border-top:1px solid var(--border);padding-top:12px;margin-top:6px}
+.buy__btn{margin-top:4px} /* give the button breathing room */
+
+/* Footer */
+.footer{border-top:1px solid var(--border);background:#fff}
+.footer__row{max-width:1200px;margin:0 auto;padding:22px 16px;display:flex;align-items:center;justify-content:space-between}
+
+/* Responsive */
+@media (max-width:980px){
+  .hero{grid-template-columns:1fr}
+  .split{grid-template-columns:1fr}
+  .specs__grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:560px){
+  .buy__form{grid-template-columns:1fr}
+  .specs__grid{grid-template-columns:1fr}
+}
