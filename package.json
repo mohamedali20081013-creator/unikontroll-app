@@ -1,7 +1,7 @@
 {
   "name": "unikontroll-app",
   "version": "1.0.0",
-  "description": "UniKontroll single-product store with mock payment and admin dashboard",
+  "description": "UniKontroll store with Stripe Checkout + admin dashboard",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
@@ -10,6 +10,7 @@
     "body-parser": "^1.20.2",
     "express": "^4.19.2",
     "express-session": "^1.17.3",
+    "stripe": "^14.25.0",
     "uuid": "^9.0.1"
   }
 }

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tack för ditt köp – UniKontroll</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <a class="nav__brand" href="/"><span class="logo">🕹️</span><span class="brand">UniKontroll</span></a>
+  </header>
+
+  <section class="section">
+    <h1>Tack! Betalning klar ✅</h1>
+    <p>Din beställning är registrerad och kommer att hanteras så snart som möjligt.</p>
+    <p><a class="btn btn--primary" href="/">Tillbaka till butik</a></p>
+  </section>
+
+  <script>
+    (async () => {
+      const p = new URLSearchParams(location.search);
+      const session_id = p.get('session_id');
+      const orderId = p.get('orderId');
+      if (session_id && orderId) {
+        try {
+          await fetch(`/api/stripe/confirm?session_id=${encodeURIComponent(session_id)}&orderId=${encodeURIComponent(orderId)}`);
+        } catch(_) {}
+      }
+    })();
+  </script>
+</body>
+</html>
